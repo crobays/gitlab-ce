@@ -3,7 +3,7 @@
     = f.label :name, class: 'control-label' do
       Group name
     .col-sm-10
-      = f.text_field :name, placeholder: 'open-source', class: 'form-control'
+      = f.text_field :name, placeholder: 'open-source', class: 'form-control', onkeyup: 'return this.value=this.value.toLowerCase();'
 
 .form-group
   = f.label :path, class: 'control-label' do

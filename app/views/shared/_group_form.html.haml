@@ -13,7 +13,7 @@
       .input-group-addon
         = root_url
       = f.text_field :path, placeholder: 'open-source', class: 'form-control',
-          autofocus: local_assigns[:autofocus] || false
+          autofocus: local_assigns[:autofocus] || false, onkeyup: 'return this.value=this.value.toLowerCase();'
     - if @group.persisted?
       .alert.alert-warning.prepend-top-10
         %ul
